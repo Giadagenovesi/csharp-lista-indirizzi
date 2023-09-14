@@ -22,7 +22,7 @@
 
                         if (stringSplits.Length < 6)
                         {
-                            Console.WriteLine($"L'indirizzo {line} non è leggibile");
+                            Console.WriteLine($"L'indirizzo non è leggibile");
                         }
                         else
                         {
@@ -43,7 +43,6 @@
                     }
                 }
 
-                //Console.WriteLine(listAddress);
                 fileListAddresss.Close();
 
             }
@@ -52,20 +51,7 @@
                 Console.WriteLine(e.Message);
             }
 
-            try
-            {
-                StreamWriter fileToWrite = File.CreateText("C:\\Users\\giada\\source\\repos\\csharp-lista-indirizzi\\csharp-lista-indirizzi\\mylistaddress.csv");
-
-                for (int i = 0; i < listAddress.Count; i++)
-                {
-                    Console.WriteLine(listAddress[i]);
-                    fileToWrite.WriteLine(listAddress[i]);
-                }
-                fileToWrite.Close();
-            }catch
-            {
-                Console.WriteLine("Non è stato possibile stampare l'indirizzo");
-            }
+            
 
         }
     }
