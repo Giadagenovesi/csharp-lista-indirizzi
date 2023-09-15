@@ -25,7 +25,11 @@ namespace csharp_lista_indirizzi
             this.Zip = zip;
         }
 
-        
+        public override string ToString()
+        {
+            return $"Indirizzo di: {this.Name} {this.Surname} che vive in {this.Street} {this.City} {this.Province} {this.Zip}";
+        }
+
 
     }
 }
